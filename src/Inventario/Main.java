@@ -21,31 +21,31 @@ public class Main {
 
 		}
 
-		System.out.println("FIN DE PROGRAMA");
+		System.out.println("FIN DEL PROGRAMA");
 	}
 
 	private static void llenarListaDeInvertarios() {
 
-		lstInventario.add(new Inventario(1, 2, "lib2020", "Petita", 2.80));
-		lstInventario.add(new Inventario(1, 2, "lib2021", "rystov", 2.00));
-		lstInventario.add(new Inventario(1, 2, "lib2022", "Petita", 2.90));
-		lstInventario.add(new Inventario(1, 2, "lib2023", "Petita", 2.70));
-		lstInventario.add(new Inventario(1, 2, "lib2024", "Petita", 2.60));
-		lstInventario.add(new Inventario(1, 2, "lib2025", "Petita", 2.50));
-		lstInventario.add(new Inventario(1, 2, "lib2026", "Petita", 2.40));
-		lstInventario.add(new Inventario(1, 2, "lib2027", "Petita", 2.30));
-		lstInventario.add(new Inventario(1, 2, "lib2028", "Petita", 2.0));
-		lstInventario.add(new Inventario(1, 2, "lib2029", "Petita", 2.10));
+		lstInventario.add(new Inventario(1, 2, "libro2020", "Odisea", 3.75));
+		lstInventario.add(new Inventario(1, 2, "libro2021", "Iliada", 3.10));
+		lstInventario.add(new Inventario(1, 2, "libro2022", "Odisea", 3.50));
+		lstInventario.add(new Inventario(1, 2, "libro2023", "Odisea", 3.30));
+		lstInventario.add(new Inventario(1, 2, "libro2024", "Odisea", 3.90));
+		lstInventario.add(new Inventario(1, 2, "libro2025", "Odisea", 3.10));
+		lstInventario.add(new Inventario(1, 2, "libro2026", "Odisea", 3.60));
+		lstInventario.add(new Inventario(1, 2, "libro2027", "Odisea", 3.20));
+		lstInventario.add(new Inventario(1, 2, "libro2028", "Odisea", 3.3));
+		lstInventario.add(new Inventario(1, 2, "libro2029", "Odisea", 3.0));
 
 	}
 
 	private static void menu() {
 
-		System.out.println("Menu menu principal");
-		System.out.println("*****************************");
+		System.out.println("Menu Principal");
+		System.out.println("----------------------");
 		System.out.println("1. SOLICITAR DATOS");
 		System.out.println("2. ACTUALIZAR DATOS");
-		System.out.println("3. MOSTRAR VECTOR");
+		System.out.println("3. MOSTRAR DATOS");
 		System.out.println("4. CONSULTAR DATOS");
 		System.out.println("5. SALIR");
 		System.out.println("MENU");
@@ -179,10 +179,6 @@ public class Main {
 		}
 	}
 
-	/**
-	 * TRABAJO EN LAS ENTIDADES CRUD , CREA,UPDATE, READ, DELETE
-	 * 
-	 */
 	private static List<Inventario> retornoLosTresPerciosAltosInventario() {
 		List<Inventario> objInvetario = lstInventario.stream()
 				.sorted(Comparator.comparing(Inventario::getPrecio).reversed()).collect(Collectors.toList());
